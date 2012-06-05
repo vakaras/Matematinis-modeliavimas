@@ -1,0 +1,66 @@
+\Chapter{Paprasčiausi matematiniai modeliai}
+
+\section{Variacinio skaičiavimo elementai}
+
+\subsection{Bernulio uždavinys apie brachistochronę}
+
+\cite[18]{konspektas}
+
+Variacinio skaičiavimo terminais uždavinys skambėtų taip:
+Tegu $y: (a, b) \to \RSET^{1}$ yra diferencijuojama argumento $x$
+funkcija, kurios $y(x_{1})=y_{1}$ ir $y(x_{2})=y_{2}$. Aibėje
+tokių funkcijų reikia rasti tą, kuriai TODO integralas įgyja
+mažiausią reikšmę.
+
+\subsection{Mažiausio ploto radimo uždavinys}
+
+\cite[19]{konspektas}
+
+\subsection{Didžiausio ploto radimo uždavinys}
+
+\cite[20]{konspektas}
+
+\subsection{Pagrindinė variacinio skaičiavimo lema}
+
+\begin{prop}
+  Tarkime, kad:
+  \begin{equation*}
+    f \in C(a, b) \land \int _{a}^{b}f(x)\gamma(x)dx = 0, %
+      \forall \gamma (\gamma \in C_{0}^{1}(a, b))
+  \end{equation*}
+  tada:
+  \begin{equation*}
+    f(x) \equiv 0, \forall x (x \in (a, b)).
+  \end{equation*}
+  Čia $C^{1}_{0}$ reiškia, kad turi tolygias išvestines ir kraštiniuose
+  taškuose yra lygi 0.
+\end{prop}
+
+\cite[23]{konspektas}
+
+\newcommand{\MSET}{\mathfrak{M}}
+
+\TODO{Suprasti iki \cite[25]{konspektas} (įskaitant).}
+
+\begin{defn}[Fukcijos stiprioji aplinka]
+  Tegu $\varepsilon > 0$ yra fiksuotas skaičius ir $y \in \MSET$.
+  Funkcijos $y$ nulinės eilės (arba stipriąja) $\varepsilon$
+  aplinka vadinsime aibę
+  \begin{equation*}
+    \MSET_{0} = \left\{ \tilde{y} \in \MSET :%
+    \max _{x\in\left[ a, b \right]} | \tilde{y}(x) - y(x) | %
+    \leq \varepsilon \right\}.
+  \end{equation*}
+\end{defn}
+
+\begin{defn}[Fukcijos silpnoji aplinka]
+  Tegu $\varepsilon > 0$ yra fiksuotas skaičius ir $y \in \MSET$.
+  Funkcijos $y$ pirmosios eilės (arba silpnąja) $\varepsilon$
+  aplinka vadinsime aibę
+  \begin{equation*}
+    \MSET_{0} = \left\{ \tilde{y} \in \MSET :%
+    \max _{x\in\left[ a, b \right]} | \tilde{y}(x) - y(x) |%
+    \max _{x\in\left[ a, b \right]} | \tilde{y}'(x) - y'(x) |%
+    \leq \varepsilon \right\}.
+  \end{equation*}
+\end{defn}
