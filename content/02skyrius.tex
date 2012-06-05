@@ -102,3 +102,51 @@ Jei turime papildomą sąlygą $y(x_{0}) = y_{0}$, tai
 
 \section{Bernulio metodas}
 
+\section{Bernulio lygtis}
+
+\begin{equation}
+  \frac{dy}{dx} + p(x) y = q(x) y^{\alpha},
+  \label{eq:sk2:4}
+\end{equation}
+čia $p(x)$ ir $q(x)$ – tolydžios kintamojo $x$ funkcijos (arba konstantos),
+o $\alpha$ – realusis skaičius. ($\alpha \neq 0 \land \alpha \neq 1$).
+
+Idėja: padalinti iš $y^{\alpha}$ ir pasinaudojant keitiniu
+$z = y^{1-\alpha}$ redukuoti lygtį į tiesinę.
+
+\section{Rikačio lygtis}
+
+\begin{equation}
+  y'(x) + p(x)y + q(x)y^{2} = f(x)
+  \label{eq:sk2:5}
+\end{equation}
+
+Tarkime, kad mes žinome kokį nors atskirą jos sprendinį $y = y_{1}(x)$,
+tada apibrėžę naują nežinomą funkciją $z = y-y_{1}$ gausime
+Bernulio lygtį.
+
+\section{Sprendinio egzistavimas ir vienatis}
+
+\begin{equation*}
+  y' = f(x, y), (x, y) \in G \subset \RSET^{2}
+\end{equation*}
+
+\begin{prop}
+  Tegu $f \in C(G)$, tada:
+  \begin{equation*}
+    \forall (x_{0}, y_{0}), (x_{0}, y_{0}) \in G, \exists y :%
+    y' = f(x, y) \land y(x_{0}) = y_{0}
+  \end{equation*}
+\end{prop}
+
+\begin{defn}[Vienaties sritis]
+  Sakysime, kad sritis $G$ yra vienaties sritis mūsų nagrinėjamai lygčiai
+  $y' = f(x, y)$, jei bet kokie du jos sprendiniai $y = \varphi(x)$ ir
+  $y = \psi(x)$, apibrėžti $x \in (a, b)$ ir iš to, kad
+  $\varphi(x_{0}) = \psi(x_{0})$, $x \in (a, b)$ seka, kad
+  $\varphi(x) \equiv \psi(x), \forall x(x \in (a, b))$.
+\end{defn}
+
+\begin{prop}
+  Tarkime, kad $f, f_{y} \in C(G)$. Tada sritis $G$ yra vienaties sritis.
+\end{prop}
