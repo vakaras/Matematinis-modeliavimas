@@ -1,0 +1,104 @@
+\Chapter{Tiesinės pirmos eilės lygtys}
+
+\begin{equation}
+  y' + a(x) y = f(x)
+  \label{eq:sk2:1}
+\end{equation}
+
+\section{Konstantų varijavimo metodas}
+
+Tarkime, kad $y_{1}$ ir $y_{2}$ yra \ref{eq:sk2:1} lygties sprendiniai.
+Jei $y = y_{1} - y_{2}$, tai įsistatę sprendinius į \ref{eq:sk2:1},
+gausime:
+\begin{equation*}
+  -\left\{%
+  \begin{aligned}
+    y'_{1} + a(x) y_{1} = f(x) \\
+    y'_{2} + a(x) y_{2} = f(x) \\
+  \end{aligned}%
+  \right.
+\end{equation*}
+\begin{equation*}
+  y' + a(x) y = 0.
+\end{equation*}
+
+Taigi bendrasis \ref{eq:sk2:1} lygties sprendinys yra:
+\begin{equation}
+  y = y_{h} + y_{a},
+  \label{eq:sk2:2}
+\end{equation}
+čia:
+\begin{description}
+  \item[$y_{h}$] – homogeninis lygties sprendinys;
+  \item[$y_{a}$] – atskiras lygties sprendinys.
+\end{description}
+
+$y_{h}$ randame spręsdami homogeninę lygtį:
+\begin{align*}
+  y' + a(x) y &= 0 \\
+  y' &= \frac{dy}{dx} \\
+  \frac{dy}{dx} + a(x) y &= 0 \\
+  \frac{dy}{dx} &= - a(x) y \\
+  \frac{dy}{y} &= - a(x) dx, y \neq 0 \\
+  \ln |y| &= - \int a(x) dx + \ln C \\
+\end{align*}
+Taigi homogeninis lygties sprendinys yra:
+\begin{equation}
+  y_{h} = C e^{-\int a(x) dx}. \\
+  \label{eq:sk2:3}
+\end{equation}
+Pastaba: $y=0$ irgi yra sprendinys, bet jis jau priklauso \ref{eq:sk2:3}.
+
+Ieškome atskirojo sprendinio $y_{a}$:
+\begin{equation*}
+  y_{a} = c(x) e^{-\int _{x_{0}}^{x} a(s) ds}.
+\end{equation*}
+Jo išvestinė:
+\begin{equation*}
+  y'_{a} = c'(x) e^{-\int _{x_{0}}^{x} a(s) ds} +%
+    c(x) e^{-\int _{x_{0}}^{x} a(s) ds}\cdot(-a(x))
+\end{equation*}
+Įsistatę į \ref{eq:sk2:1} gauname:
+\begin{equation*}
+  c'(x) e^{-\int _{x_{0}}^{x} a(s) ds} +%
+    c(x) e^{-\int _{x_{0}}^{x} a(s) ds}\cdot(-a(x)) +%
+  a(x) \cdot c(x) e^{-\int _{x_{0}}^{x} a(s) ds} = f(x)
+\end{equation*}
+Suprastiname ir suintegruojame:
+\begin{align*}
+  c'(x) e^{-\int _{x_{0}}^{x} a(s) ds} &= f(x) \\
+  c'(x) &= f(x) e^{\int _{x_{0}}^{x} a(s) ds} \\
+  c(x) &= \int _{x_{0}} ^{x} f(t) e^{\int _{x_{0}}^{t} a(s) ds} dt + C_{1}
+\end{align*}
+Kadangi $C_{1}$ galim pasirinkti bet kokį, tai renkamės 0. Taigi
+atskirasis sprendinys yra:
+\begin{equation*}
+  y_{a} =
+    e^{-\int _{x_{0}}^{x} a(s) ds} \cdot 
+    \int _{x_{0}} ^{x} f(t) e^{\int _{x_{0}}^{t} a(s) ds} dt
+\end{equation*}
+
+O bendrasis sprendinys:
+\begin{align*}
+  y
+  &= y_{h} + y_{a} \\
+  &= C e^{-\int a(x) dx} + 
+    e^{-\int _{x_{0}}^{x} a(s) ds} \cdot 
+    \int _{x_{0}} ^{x} f(t) e^{\int _{x_{0}}^{t} a(s) ds} dt
+\end{align*}
+
+Jei turime papildomą sąlygą $y(x_{0}) = y_{0}$, tai
+\begin{align*}
+  y(x_{0}) &= C \cdot 1 + 1 \cdot 0 \\
+  C &= y_{0} \\
+\end{align*}
+
+\begin{align*}
+  y
+  &= y_{0} e^{-\int a(x) dx} + 
+    e^{-\int _{x_{0}}^{x} a(s) ds} \cdot 
+    \int _{x_{0}} ^{x} f(t) e^{\int _{x_{0}}^{t} a(s) ds} dt
+\end{align*}
+
+\section{Bernulio metodas}
+
