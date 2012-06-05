@@ -1,2 +1,120 @@
 \Chapter{Pirmos eilės diferencialinės lygtys}
 
+Diferencialinė lygtis neišreikšta išvestinės atžvilgiu:
+\begin{equation}
+  F (x, y, y') = 0.
+  \label{eq:sk1:1}
+\end{equation}
+
+Diferencialinė lygtis išreikšta išvestinės atžvilgiu:
+\begin{equation}
+  y' = f(x, y).
+  \label{eq:sk1:2}
+\end{equation}
+
+\begin{defn}[Integralinė kreivė]
+  Tarkime, kad $y = \varphi(x), x \in (a, b)$ yra \ref{eq:sk1:2} lygties
+  sprendinys. Tada ši lygtis ($y = \varphi(x)$) apibrėžia kreivę
+  $l$, kuri vadinama integraline kreive.
+\end{defn}
+
+\begin{defn}[Krypčių laukas]
+  Kiekvienam taškui galime priskirti atkarpą su krypties koeficientu
+  $k = f(x, y)$. Tokių atkarpėlių visuma vadinama krypčių lauku.
+\end{defn}
+
+\begin{defn}[Izoklina]
+  Kreivė, kurioje krypčių lauko atkarpėlių kryptys yra vienodos.
+  Ji yra apibrėžiama lygtimi:
+  \begin{equation*}
+    c = f(x, y),
+  \end{equation*}
+  čia $c$ – yra pasirinkta kryptis.
+\end{defn}
+
+Integralinės lygties bendrasis sprendinys:
+\begin{equation}
+  y = \varphi(x, C).
+  \label{eq:sk1:3}
+\end{equation}
+
+Integralinės lygties bendrasis integralas:
+\begin{equation}
+  \Phi(x, y, C) = 0.
+  \label{eq:sk1:4}
+\end{equation}
+
+\begin{defn}[Bendrasis sprendinys]
+  Tegu $\varphi \in D, D \subset \RSET^{2}$. Sakysime, kad lygtis
+  $y = \varphi(x, C)$ $(x, C \in D)$ apibrėžia bendrąjį diferencialinės
+  lygties $y' = f(x, y), (x, y \in G)$ sprendinį, jei:
+  \begin{enumerate}
+    \item $\forall (x_{0}, y_{0}) \in G, y_{0} = \varphi(x_{0}, C) \implies%
+      \exists C_{0}, C_{0} = C(x_{0}, y_{0})$
+    \item $(x_{0}, y_{0}) \in D$ ir $y = \varphi(x, C_{0})$ yra Koši
+      uždavinio $y' = f(x, y), (x, y) \in G, y(x_{0}) = y_{0}$
+      sprendinys.
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}[Atskirasis sprendinys]
+  Sprendinį $y = \varphi(x, C_{0})$, kurį gauname iš bendrojo sprendinio
+  $C$ pakeitę į $C_{0}$, vadiname atskiruoju sprendiniu.
+\end{defn}
+
+\begin{defn}[Įpatingasis sprendinys]
+  Sprendinį $y = \varphi(x)$ mes vadinsime ypatinguoju, jei per
+  kiekvieną jo tašką eina dar bent viena diferencialinės lygties
+  integralinė kreivė.
+\end{defn}
+
+\section{Diferencialinių lygčių sprendimo metodai}
+
+\subsection{Lygtys su atskiriamais kintamaisiais}
+
+\subsection{Lygtys, kurias įmanoma suvesti į lygtį su atskirtaisiais
+kintamaisiais}
+
+\subsubsection{Polinomas}
+
+\begin{equation*}
+  y' = f(ax + by + c), a, b, c \in \RSET
+\end{equation*}
+
+Keitinys:
+\begin{align*}
+  v &= ax + by + c \\
+  v' &= a + by' \\
+\end{align*}
+
+\subsubsection{Homogeninė nulinio laipsnio funkcija}
+
+\begin{align*}
+  f(\lambda x, \lambda y) &= \lambda^{0} f(x, y) \\
+  y' &= f(x, y) \\
+  y' &= f(\lambda x, \lambda y) \\
+  \intertext{Pakeičiam $\lambda = \frac{1}{x}$:}
+  &= f(1, \frac{y}{x}) \\
+\end{align*}
+
+\subsubsection{Polinomų dalyba}
+
+\begin{equation*}
+  y' = f \left( \frac{ax + by + c}{mx + ny + d} \right),
+  a, b, c, m, n, d \in \RSET
+\end{equation*}
+
+Iš lygčių sistemos:
+\begin{equation*}
+  \left\{%
+  \begin{aligned}
+    ax + by + c &= 0 \\
+    mx + ny + d &= 0 \\
+  \end{aligned}%
+  \right.
+\end{equation*}
+gauname sprendinį $(x_{0}, y_{0})$ ir atliekame keitinį:
+\begin{align*}
+  u &= x - x_{0} \\
+  v &= y - y_{0} \\
+\end{align*}
