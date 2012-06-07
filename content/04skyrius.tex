@@ -1,0 +1,217 @@
+\Chapter{Diferencialinių lygčių sistemos}
+
+\section{Sąvokos}
+
+\cite[109]{konspektas}
+
+\begin{defn}[Itegralinė kreivė]
+  Tegu $y = \varphi(x)$, $x \in (a, b)$ yra diferencialinių lygčių
+  sistemos sprendinys. Tada funkcija $\varphi$ srityje
+  $G (G \subset \RSET^{n+1})$ apibrėžia kreivę
+  \begin{equation*}
+    l = \left\{ (x, y) \in \RSET^{n+1} :%
+      y = \varphi(x), x \in (a, b) \right\} \subset \RSET^{n+1},
+  \end{equation*}
+  kuri yra vadinama šios sistemos integraline kreive.
+\end{defn}
+
+\begin{defn}[Fazinė trajektorija]
+  \begin{equation*}
+    \left\{ y \in \RSET^{n} : y = \varphi(x), x \in (a, bj) \right\}%
+      \subset \RSET^{n}
+  \end{equation*}
+  Taip apibrėžta kreivė, kartu su apėjimo kryptimi, yra vadinama
+  fazine trajektorija, o erdvė $\RSET^{n}$ – fazine erdve.
+  Kitaip tariant fazinė trajektorija yra integralinės kreivės
+  projekcija lygiagrečiai $x$ ašiai.
+\end{defn}
+
+\begin{defn}[Pusiausvyros taškas]
+  Fazinė trajektorija sutampanti su tašku yra vadinama pusiausvyros
+  tašku (kartais ramybės tašku). Taškas $y$ yra pusiausvyros
+  taškas tada ir tik tada, kai:
+  \begin{equation*}
+    f(x, y) = 0, \forall x (x \in (a, b)).
+  \end{equation*}
+\end{defn}
+
+\section{Tiesinės homogeninių diferencialinių lygčių sistemos}
+
+Tiesinė homogeninė lygčių sistema:
+\begin{equation}
+  y' = A(x) y.
+  \label{eq:sk4:1}
+\end{equation}
+
+\begin{prop}
+  Jeigu $\varphi(x)$ yra \ref{eq:sk4:1} lygties sprendinys, tai ir
+  $C\varphi(x)$ yra sprendinys.
+  \begin{proof}
+    \begin{equation*}
+      (C\varphi(x))' = C\varphi'(x) = CA(x)\varphi(x) = A(x)(C\varphi(x))
+    \end{equation*}
+  \end{proof}
+\end{prop}
+
+\begin{prop}
+  Jeigu $\varphi(x)$ ir $\psi(x)$ yra sprendiniai, tai ir
+  $\varphi(x) + \psi(x)$ irgi yra sprendinys.
+  \begin{proof}
+    \begin{equation*}
+      (\varphi(x) + \psi(x))' =%
+      \varphi'(x) + \psi'(x) =%
+      A(x)\varphi(x) + A(x)\psi(x) =%
+      A(x)(\varphi(x) + \psi(x))
+    \end{equation*} 
+  \end{proof}
+\end{prop}
+
+Išvados:
+\begin{enumerate}
+  \item Jeigu $\varphi_{1},\varphi_{2},\ldots,\varphi_{m}$ yra
+    \ref{eq:sk4:1} sistemos sprendiniai, tai ir
+    $C_{1}\varphi_{1}, C_{2}\varphi_{2},\ldots,C_{m}\varphi_{m}$
+    yra \ref{eq:sk4:1} sistemos sprendiniai.
+  \item Tegu $z = \varphi + i \psi$ yra kompleksinės \ref{eq:sk4:1}
+    lygčių sistemos su realiais koeficientas $a_{k,j} (k,j = 1..n)$
+    sprendinys. Tada $\varphi$ ir $\psi$ irgi yra sprendiniai.
+\end{enumerate}
+
+\begin{defn}
+  Vektorinės funkcijos
+  $\varphi_{1}, \varphi_{2}, \ldots, \varphi_{m} : (a, b) \to \RSET^{n}$
+  yra tiesiškai nepriklausomos tada ir tik tada, kai iš to, kad
+  \begin{equation*}
+    c_{1}\varphi_{1}(x) + \cdots + c_{m}\varphi_{m}(x) = 0,%
+    \forall x (x \in (a, b))
+  \end{equation*}
+  išplaukia, kad
+  \begin{equation*}
+    c_{1} = c_{2} = \cdots = c_{m} = 0.
+  \end{equation*}
+\end{defn}
+
+\begin{prop}
+  Bet kokie $n$ tiesiškai nepriklausomi \ref{eq:sk4:1} sistemos
+  sprendiniai sudaro šios sistemos sprendinių bazę. Kitaip tariant
+  per juos galima išreikšti visus kitus sistemos sprendinius.
+\end{prop}
+
+\begin{defn}[Funadamentaliųjų sprendinių matrica]
+  Tarkime $\varphi_{1}, \varphi_{2}, \ldots, \varphi_{n}$ yra
+  $n$ tiesiškai nepriklausomi \ref{eq:sk4:1} sistemos sprendiniai
+  (sprendinių bazė). Juos vadinsime fundamentaliąja sprendinių
+  sistema, o iš jų sudarytą matricą:
+  \begin{equation*}
+    \Phi = \left( \varphi_{1}, \varphi_{2}, \ldots, \varphi_{n} \right)
+  \end{equation*}
+  fundamentaliąja sprendinių matrica.
+\end{defn}
+
+\begin{defn}[Vronskio determinantas]
+  Fundamentaliųjų sprendinių matricos $\Phi$ determinantas yra
+  vadinamas funkcijų sistemos $\varphi_{1}, \ldots, \varphi_{n}$
+  Vronskio determinantu:
+  \begin{equation*}
+    W(x) = |\Phi(x)|.
+  \end{equation*}
+\end{defn}
+
+\begin{prop}
+  Yra ekvivalentūs tokie trys teiginiai:
+  \begin{enumerate}
+    \item $W(x) = 0, \forall x (x \in (a, b))$;
+    \item $W(x_{0}) = 0$, kokiame nors taške $x_{0} \in (a, b)$;
+    \item Sprendiniai $\varphi_{1}, \ldots, \varphi_{n}$ – tiesiškai
+      priklausomi.
+  \end{enumerate}
+\end{prop}
+
+\begin{defn}[Liuvilio formulė]
+  \begin{equation*}
+    W(x) = W(x_{0})e^{\int _{x_{0}}^{x} \sum _{k=1}^{n}a_{kk}(x)dx}
+  \end{equation*}
+\end{defn}
+
+\section{Nehomogeninės tiesinių diferencialinių lygčių sistemos}
+
+\begin{equation}
+  y' = A(x) y + q(x)
+  \label{eq:sk4:2}
+\end{equation}
+
+Tarkime, kad vektorius $y = \psi(x), x \in (a, b)$ yra
+\ref{eq:sk4:2} sistemos sprendinys. Padarę keitinį $y = \varphi + \psi$,
+($\varphi$ yra kažkokia nauja funkcija) gausime tiesinę homogeninę
+lygčių sistemą:
+\begin{align*}
+  y' &= A(x) y + q(x) \\
+  (\varphi + \psi)' &= A(x)(\varphi + \psi) + q(x) \\
+  \varphi' + \psi' &= A(x)\varphi + A(x)\psi + q(x) \\
+\end{align*}
+\begin{equation}
+  \varphi' = A(x)\varphi.
+  \label{eq:sk4:3}
+\end{equation}
+
+Taigi \ref{eq:sk4:2} bendrasis sprendinys:
+\begin{equation*}
+  y = y_{a} + y_{h},
+\end{equation*}
+čia $y_{a}$ – bet koks sprendinys, o $y_{h}$ – homogeninis sprendinys.
+
+Tegu $\varphi_{1}, \varphi_{2}, \ldots, \varphi_{n}$ yra
+fundamentalioji \ref{eq:sk4:3} sistemos sprendinių sistema, o
+$\Phi$ – iš jų sudaryta fundamentalioji matrica. Atskirą sprendinį
+rasime konstantų varijavimo metodu.
+
+Apibrėžkime funkciją:
+\begin{equation*}
+  \gamma(x) = \Phi(x)c(x),
+\end{equation*}
+čia $c(x) : (a, b) \to \RSET^{n}$ – nežinoma vektorinė funkcija.
+
+\TODO{Suprasti iki \cite[118]{konspektas}.}
+
+\section{Tiesinių diferencialinių lygčių sistemos su pastoviais
+realiais koeficientais}
+
+\cite[119]{konspektas}
+
+Idėja yra ieškoti sprendinio, kurio forma:
+\begin{equation*}
+  y = be^{\lambda x},
+\end{equation*}
+kur $y$ ir $b$ yra vektoriai, o $y$ – skaliaras. Šį sprendinį įsistačius
+į pradinę lygtį yra gaunama charakteristinė lygtis:
+\begin{align*}
+  (b e^{\lambda x})' &= A b e^{\lambda x} \\
+  \lambda b e^{\lambda x} &= A b e^{\lambda x} \\
+  (E \lambda - A) b e^{\lambda x} &= 0 \\
+  (E \lambda - A) &= 0 \\
+\end{align*}
+
+\subsection{Pastaba}
+
+%Iš $n$ nepriklausomų sprendinių galime sudaryti fundamentalią
+%matricą: $\Phi = (\varphi_{1}, \ldots, \varphi_{n})$.
+
+Tegu $A$ yra $n \times n$ eilės matrica su realiais koeficientais.
+Tiesinę sistemą $y' = Ay$, panaudoję keitinį $y = Qz$, kur
+$|Q| \neq 0$ galime suvesti:
+\begin{align*}
+  y' &= Ay \\
+  Qz' &= AQz \\
+  z' &= Q^{-1}AQz \\
+\end{align*}
+$Q$ galime parinkti taip, kad $Q^{-1}AQ = J$. Čia $J$ – Žordano
+matrica. Kartu tiesinę sistema su pastoviais koeficientais
+galima suvesti į paprastesnę sistemą:
+\begin{equation*}
+  z' = Jz.
+\end{equation*}
+Ši sistema vadinama kanonine.
+
+\section{Kanoninių sistemų plokštumoje faziniai portretai}
+
+\cite[126-129]{konspektas}
