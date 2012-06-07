@@ -1,0 +1,167 @@
+\Chapter{Aukštesnės eilės paprastos diferencialinės lygtys}
+
+\section{Paprasčiausios diferencialinės lygtys, kurių eilę galima
+sumažinti}
+
+\cite[90]{konspektas}
+
+\section{Tiesinės homogeninės antros eilės lygtys}
+
+\cite[93]{konspektas}
+
+\begin{defn}[Tiesinis diferencialinis reiškinys]
+  Tarkime, funkcijos $a_{1}, a_{2}$ yra tolydžios intervale $(a, b)$ ir
+  \begin{equation*}
+    L(y) = y'' + a_{1}(x)y' + a_{2}(x)y.
+  \end{equation*}
+  Tada reiškinys $L(y)$ yra vadinamas antros eilės tiesiniu
+  diferencialiniu reiškiniu, o operatorius $L$ antros eilės tiesiniu
+  diferencialiniu operatoriumi. Jo apibrėžimo sritis yra funkcijų
+  erdvė $C^{2}(a, b)$.
+\end{defn}
+
+$L(y)$ savybės:
+\begin{enumerate}
+  \item $L(\lambda \varphi) = \lambda L(\varphi),$
+    $\forall \varphi \in C^{2}(a, b), \lambda \in \RSET$;
+  \item $L(\varphi + \psi) = L(\varphi) + L(\psi),$
+    $\forall \varphi, \psi \in C^{2}(a, b)$.
+\end{enumerate}
+
+Nagrinėsime tiesinę homogeninę antros eilės diferencialinę lygtį:
+\begin{equation*}
+  L(y) = 0.
+\end{equation*}
+
+\begin{align*}
+  L(\varphi)
+  &= L(c_{1}\varphi_{1} + c_{2}\varphi_{2}) \\
+  &= L(c_{1}\varphi_{1}) + L(c_{2}\varphi_{2}) \\
+  &= c_{1}L(\varphi_{1}) + c_{2}L(\varphi_{2}) \\
+  &= c_{1} \cdot 0 + c_{2} \cdot 0 \\
+  &= 0 \\
+\end{align*}
+
+\begin{defn}[%
+  Funkcijų sistemos $\varphi_{1}, \varphi_{2}$ Vronskio determinantas]
+  Tegu $\varphi_{1}, \varphi_{2}$ yra diferencijuojamos intervale
+  $(a, b)$ funkcijos. Iš šių funkcijų ir jų išvestinių
+  sudarytas determinantas vadinamas funkcijų sistemos
+  $\varphi_{1}, \varphi_{2}$ Vronskio determinantas:
+  \begin{equation*}
+    W(x) =%
+    \begin{vmatrix}
+      \varphi_{1}(x) & \varphi_{2}(x) \\
+      \varphi'_{1}(x) & \varphi'_{2}(x) \\
+    \end{vmatrix}
+  \end{equation*}
+\end{defn}
+
+\section{Konstantų varijavimo metodas}
+
+\cite[97]{konspektas}
+
+\begin{align*}
+  \left\{%
+  \begin{aligned}
+    v(x) &= c_{1}(x) \varphi_{1}(x) + c_{2}(x) \varphi_{2}(x) \\
+    v'(x) &= c_{1}(x) \varphi'_{1}(x) + c_{2}(x) \varphi'_{2}(x) + %
+      \underbrace{c'_{1}(x) \varphi_{1}(x) + c'_{2}(x) \varphi_{2}(x)}_{%
+      0} \\
+    v''(x) &= c_{1}(x) \varphi''_{1}(x) + c_{2}(x) \varphi''_{2}(x) + %
+      c'_{1}(x) \varphi'_{1}(x) + c'_{2}(x) \varphi'_{2}(x) \\
+  \end{aligned}
+  \right. \\
+  +\left\{%
+  \begin{aligned}
+    a_{2}(x)v(x) &=%
+      a_{2}(x)c_{1}(x) \varphi_{1}(x) +%
+      a_{2}(x)c_{2}(x) \varphi_{2}(x) \\
+    a_{1}(x)v'(x) &=%
+      a_{1}(x)c_{1}(x) \varphi'_{1}(x) +%
+      a_{1}(x)c_{2}(x) \varphi'_{2}(x) \\
+    v''(x) &= %
+      c_{1}(x) \varphi''_{1}(x) + c_{2}(x) \varphi''_{2}(x) + %
+      c'_{1}(x) \varphi'_{1}(x) + c'_{2}(x) \varphi'_{2}(x) \\
+  \end{aligned}
+  \right. \\
+  \underbrace{v''(x) + a_{1}(x)v'(x) + a_{2}(x)v(x)}_{L(y)} =%
+    a_{2}(x)c_{1}(x) \varphi_{1}(x) + \\
+    a_{2}(x)c_{2}(x) \varphi_{2}(x) + \\
+    a_{1}(x)c_{1}(x) \varphi'_{1}(x) + \\
+    a_{1}(x)c_{2}(x) \varphi'_{2}(x) + \\
+    c_{1}(x) \varphi''_{1}(x) + c_{2}(x) \varphi''_{2}(x) + \\
+    c'_{1}(x) \varphi'_{1}(x) + c'_{2}(x) \varphi'_{2}(x) \\
+  L(y) = %
+    \underbrace{
+      a_{2}(x)c_{1}(x) \varphi_{1}(x) + 
+      a_{1}(x)c_{1}(x) \varphi'_{1}(x) + 
+      c_{1}(x) \varphi''_{1}(x)
+      }_{c_{1}(x)L(\varphi_{1}(x)) = 0} + \\
+    \underbrace{
+      a_{2}(x)c_{2}(x) \varphi_{2}(x) +
+      a_{1}(x)c_{2}(x) \varphi'_{2}(x) +
+      c_{2}(x) \varphi''_{2}(x)
+      }_{c_{2}(x)L(\varphi_{2}(x)) = 0} + \\
+    c'_{1}(x) \varphi'_{1}(x) +
+    c'_{2}(x) \varphi'_{2}(x) \\
+  L(y) = c'_{1}(x) \varphi'_{1}(x) + c'_{2}(x) \varphi'_{2}(x) \\
+\end{align*}
+Funkcija $L(y)$ tenkins lygtį, jei:
+\begin{equation*}
+  c'_{1}(x) \varphi'_{1}(x) + c'_{2}(x) \varphi'_{2}(x) = q(x).
+\end{equation*}
+
+Taigi reikalavimai konstantoms:
+\begin{equation*}
+  \left\{%
+  \begin{aligned}
+    c'_{1}(x)\varphi_{1}(x) + c'_{2}(x)\varphi_{2}(x) &= 0 \\
+    c'_{1}(x)\varphi'_{1}(x) + c'_{2}(x)\varphi'_{2}(x) &= q(x) \\
+  \end{aligned}.
+  \right.
+\end{equation*}
+Išsprendę gauname:
+\begin{align*}
+  c'_{1}(x)
+  &= \frac{
+  \begin{vmatrix}
+    0 & \varphi_{2}(x) \\
+    q(x) & \varphi'_{2}(x) \\
+  \end{vmatrix}
+  }{
+  \begin{vmatrix}
+    \varphi_{1}(x) & \varphi_{2}(x) \\
+    \varphi'_{1}(x) & \varphi'_{2}(x) \\
+  \end{vmatrix}
+  }
+  = \frac{W_{1}(x)}{W(x)} \\
+  c'_{2}(x)
+  &= \frac{
+  \begin{vmatrix}
+    \varphi_{1}(x) & 0 \\
+    \varphi'_{1}(x) & q(x) \\
+  \end{vmatrix}
+  }{
+  \begin{vmatrix}
+    \varphi_{1}(x) & \varphi_{2}(x) \\
+    \varphi'_{1}(x) & \varphi'_{2}(x) \\
+  \end{vmatrix}
+  }
+  = \frac{W_{2}(x)}{W(x)} \\
+\end{align*}
+
+\section{Tiesinės antros eilės lygtys su pastoviais realiais
+koeficientais}
+
+\section{Stygos svyravimų lygtis}
+
+\cite[41]{konspektas}
+
+\section{Membranos svyravimas}
+
+\cite[44]{konspektas}
+
+\section{Šilumos laidumas ir dujų difuzija}
+
+\cite[47]{konspektas}
