@@ -1,0 +1,61 @@
+\Chapter{Dalinių išvestinių lygtys}
+
+\section{Furjė arba kintamųjų atskyrimo metodas}
+
+TODO: \cite[168]{konspektas}
+
+\section{Tiesinių antros eilės dalinių išvestinių klasifikacija}
+
+\cite[157]{konspektas}
+
+Tiesinė antros eilės dalinių išvestinių lygtis:
+\begin{equation}
+  \sum ^{n} _{i=1,j=1} a_{ij}(x)u_{x_{i}x_{j}} + %
+  \sum _{i=1}^{n} a_{i}(x)u_{x_{i}} + a(x)u = f(x),
+  \label{eq:sk7:1}
+\end{equation}
+čia:
+\begin{itemize}
+  \item $u = u(x) = u(x_{1},x_{2},\ldots,x_{n}), x \in \RSET^{n}$;
+  \item $a_{ij} = a_{ji}$;
+  \item $a_{ij}$ – žinomos funkcijos.
+\end{itemize}
+
+Fiksuojame tašką $x = x^{0}$ ir
+\begin{equation*}
+  \Lambda(x^{0}, \xi) =
+  \underbrace{
+    \sum^{n}_{i=1,j=1} a_{ij}(x^{0})\xi_{i}\xi_{j}
+  }_{\t{Kvadratinė forma}} =
+  \sum _{k=1}^{n} \lambda_{k}\gamma_{k}^{2},
+\end{equation*}
+čia $\xi = (\xi_{1}, \ldots, \xi_{n})$.
+
+\begin{equation*}
+  \xi_{i} = \sum_{k=1}^{n} C_{ki}\gamma_{k}, i = 1,2,\ldots,n
+\end{equation*}
+
+Paimame neišsigimusią matricą ($det \left\{ C_{ki} \right\} \neq 0$).
+
+Kvadratinių formų incercijos dėsnis: kvadratinės formos, suvestos
+į kvadratų sumą, teigiamų, neigiamų ir lygių nuliui koeficientų
+$\lambda_{k}$ skaičius nepriklauso nuo suvedančios matricos $C_{ki}$.
+
+\begin{defn}
+  Sakysime \ref{eq:sk7:1} lygtis taške $x^{0}$ yra
+  ($\alpha,\beta,\gamma$) tipo jeigu kvadratinėje formoje suvestoje
+  į kvadratų sumą yra $\alpha$ teigiamų, $\beta$ neigiamų ir
+  $\gamma$ lygių 0 koeficientų $\lambda_{k}$.
+\end{defn}
+
+Dažniausiai pasitaikantys atvejai:
+\begin{enumerate}
+  \item $\lambda_{k} \neq = 0, \forall k (k = 1,\ldots,n)$,
+    $\lambda_{n} \gtrless 0,$
+    $\lambda_{1}, \lambda_{2},\ldots,\lambda_{n-1} \lessgtr 0$
+    – hiperbolinė lygtis;
+  \item $\lambda_{k} \neq 0, \forall k$ ir visi vieno ženklo –
+    elipsinė lygtis;
+  \item $\lambda_{n} = 0, \lambda_{i} \neq 0$ ir vieno ženklo –
+    parabolinė lygtis.
+\end{enumerate}
